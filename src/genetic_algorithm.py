@@ -52,12 +52,14 @@ class GeneticAlgorithm:
     def select(self, population: List[Schedule], fitnesses: List[float]) -> Schedule:
         # Tournament selection
         tournament_size = 3
-        best = None
-        for _ in range(tournament_size):
+        best_ind = random.randint(0, len(population) - 1)
+        
+        for _ in range(tournament_size - 1):
             ind = random.randint(0, len(population) - 1)
-            if best is None or fitnesses[ind] > fitnesses[population.index(best)]:
-                best = population[ind]
-        return best
+            if fitnesses[ind] > fitnesses[best_ind]:
+                best_ind = ind
+        return population[best_ind]
+
 
     def crossover(self, parent1: Schedule, parent2: Schedule) -> Schedule:
         if random.random() > self.crossover_rate:

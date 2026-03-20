@@ -5,6 +5,7 @@ Ce projet utilise un algorithme génétique pour résoudre le problème complexe
 ## Fonctionnalités
 
 - **Algorithme Génétique robuste** : Gère la sélection par tournoi, le croisement en un point et la mutation aléatoire.
+- **Algorithme de Colonie d'Abeilles (ABC)** : Comprend les phases des abeilles employées, spectatrices et éclaireuses pour une recherche globale efficace.
 - **Gestion des contraintes** : 
     - Un professeur ne peut pas être à deux endroits à la fois.
     - Une salle ne peut pas accueillir deux cours simultanément.
@@ -19,10 +20,12 @@ Ce projet utilise un algorithme génétique pour résoudre le problème complexe
 │   ├── models.py           # Définition des classes (Professor, Room, Course, etc.)
 │   ├── data_loader.py      # Génération/Chargement des données de test
 │   ├── genetic_algorithm.py # Moteur de l'algorithme génétique
+│   ├── abc_algorithm.py    # Moteur de l'algorithme de colonie d'abeilles
 │   └── visualization.py    # Outils d'affichage et graphiques
-├── main.py                 # Point d'entrée principal
+├── main.py                 # Point d'entrée principal (choix de l'algorithme disponible)
 └── README.md               # Documentation
 ```
+
 
 ## Installation
 
